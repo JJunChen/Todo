@@ -7,7 +7,7 @@ import { styles } from "./styles";
 import { CREATE_TODO } from "./reducers";
 
 
-export default class _App extends Component {
+export class _App extends Component {
   constructor() {
     super();
     this.state = {
@@ -37,10 +37,10 @@ export default class _App extends Component {
         handlePress={this.handlePress}
         />
       <View style={styles.todos}>
-      {this.props.todos.map(todo => {
+      {this.props.todos.map((todo, i) => {
         return (
-          <View style={styles.todo} key={todo.id}>
-            <Text style={styles.todoText}>{todo.name}</Text>
+          <View style={styles.todo} key={i}>
+            <Text style={styles.todoText}>{todo}</Text>
           </View>
         );
       })}

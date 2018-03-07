@@ -3,7 +3,7 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import { store } from './src/store';
 
-import App from './src/App';
+import { App } from './src/App';
 
 const Main = () => (
   <Provider store={store}>
