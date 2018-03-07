@@ -1,4 +1,14 @@
 import { AppRegistry } from 'react-native';
-import App from './App';
+import React from 'react';
+import { Provider } from 'react-redux';
+import { store } from './src/store';
 
-AppRegistry.registerComponent('Todo', () => App);
+import App from './src/App';
+
+const Main = () => (
+  <Provider store={store}>
+    <App />
+  </Provider>  
+);
+
+AppRegistry.registerComponent('Todo', () => Main);
