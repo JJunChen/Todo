@@ -8,6 +8,9 @@ import { CREATE_TODO } from "./reducers";
 
 
 export class _App extends Component {
+  static defaultProps = {
+    todos: []
+  }
   constructor() {
     super();
     this.state = {
